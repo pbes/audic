@@ -1,7 +1,7 @@
 import ow from "ow"
 
 export = class Audic {
-	private _el: HTMLAudioElement
+	_el: HTMLAudioElement
 
 	constructor(src: string) {
 		ow(src, ow.optional.string)

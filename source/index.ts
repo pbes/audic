@@ -120,6 +120,18 @@ class Audic {
 		})()
 	}
 
+	public set loop(looped) {
+		ow(looped, ow.boolean)
+
+		void (async () => {
+			await this._setup
+			const { loop } = await this._vlc.info();
+			if ((loop && !looped) || (!loop && looped)) {
+				await this._vlc.command("pl_loop")
+			}
+		})
+	}
+
 	/**
 	The current playing time of the audio.
 	*/

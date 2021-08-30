@@ -2,7 +2,7 @@
 	"name": "audic",
 	"version": "0.0.0",
 	"description": "Play some audio.",
-	"repository": "https://github.com/Richienb/audic.git",
+	"repository": "https://github.com/pbes/audic.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "dist/index.js",
