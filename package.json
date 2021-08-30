@@ -1,6 +1,6 @@
 {
   "name": "@pbes/audic",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Play some audio.",
   "repository": {
     "type": "git",

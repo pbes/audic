@@ -53,10 +53,13 @@ class Audic {
 	/**
 	Start playing the audio.
 	*/
-	public async play() {
+	public async play(looped) {
 		if (!this.playing) {
 			this.playing = true
 			await this._setup
+			if (looped) {
+				await this._vlc.command("pl_loop")
+			}
 			await this._vlc.command("pl_pause", {
 				id: 0
 			})
@@ -118,18 +121,6 @@ class Audic {
 			})
 			this.playing = false
 		})()
-	}
-
-	public set loop(looped) {
-		ow(looped, ow.boolean)
-
-		void (async () => {
-			await this._setup
-			const { loop } = await this._vlc.info();
-			if ((loop && !looped) || (!loop && looped)) {
-				await this._vlc.command("pl_loop")
-			}
-		})
 	}
 
 	/**
