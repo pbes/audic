@@ -1,13 +1,13 @@
 # Audic [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/audic/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/audic)
 
-Play some audio.
+Play some audio. audic with commonJS moduling
 
 [![NPM Badge](https://nodei.co/npm/audic.png)](https://npmjs.com/package/audic)
 
 ## Install
 
 ```sh
-npm install audic
+npm install @pbes/audic
 ```
 
 ## Usage
